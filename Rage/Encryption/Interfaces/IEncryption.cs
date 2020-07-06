@@ -22,7 +22,7 @@ using System.Text;
 namespace SADL.Rage.Encryption.Interfaces
 {
     /// <summary>
-    /// <see cref="IArchive"/> defines a interface that aims to implement encryption and decription methods
+    /// Defines a interface that aims to implement encryption and decription methods
     /// </summary>
     public interface IEncryption
     {

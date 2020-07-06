@@ -21,7 +21,7 @@ using System.Security.Cryptography;
 namespace SADL.Rage.Encryption
 {
     /// <summary>
-    /// <see cref="AES"/> defines a decription and decription solution for the AES algorithm used by RAGE.
+    /// Defines a decription and decription solution for the AES algorithm used by RAGE.
     /// </summary>
     public class AES : IEncryption
     {

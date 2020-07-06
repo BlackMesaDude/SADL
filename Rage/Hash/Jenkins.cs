@@ -5,7 +5,7 @@ using System.Text;
 namespace SADL.Rage.Hash
 {
     /// <summary>
-    /// <see cref="Jenkins"/> is a class that derivers from the <b>Jenkins hashing functions</b>, these are a collection of non-cryptographic hash functions for multi-byte keys.
+    /// Contains hashing functions that deriver from the <b>Jenkins hashing functions</b>, these are a collection of non-cryptographic hash functions for multi-byte keys.
     /// </summary>
     public class Jenkins
     {
