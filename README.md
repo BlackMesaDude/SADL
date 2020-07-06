@@ -1,5 +1,7 @@
 # SADL
 
+![.NET Core](https://github.com/francescomesianodev/SADL/workflows/.NET%20Core/badge.svg)
+
 Index
 =================
 
