@@ -18,7 +18,7 @@
 namespace SADL.Rage.Archive.Interfaces
 {
     /// <summary>
-    /// <see cref="IArchive"/> defines a interface that aims to declare manipulation methods and objects for a directory of an archive
+    /// Defines methods for a directory inside an archive
     /// </summary>
     public interface IArchiveDirectory
     {

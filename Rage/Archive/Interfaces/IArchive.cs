@@ -20,7 +20,7 @@ using System;
 namespace SADL.Rage.Archive.Interfaces
 {
     /// <summary>
-    /// <see cref="IArchive"/> defines a interface that aims to declare manipulation methods and objects for an archive
+    /// IDisposable that defines archive methods
     /// </summary>
     interface IArchive : IDisposable
     {

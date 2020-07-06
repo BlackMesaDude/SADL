@@ -20,7 +20,7 @@ using System.IO;
 namespace SADL.Rage.Archive.Interfaces
 {
     /// <summary>
-    /// <see cref="IArchive"/> defines a interface that aims to declare manipulation methods and objects for an archive file
+    /// Defines methods for a file inside an archive
     /// </summary>
     public interface IArchiveFile
     {
