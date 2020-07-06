@@ -20,10 +20,23 @@ using System.IO;
 
 namespace SADL.Rage.Data.Streams
 {
+    /// <summary>
+    /// Delegate that gets the offset of the buffer
+    /// </summary>
     public delegate long GetOffsetDelegate();
+    /// <summary>
+    /// Delegate that gets the length of the buffer
+    /// </summary>
     public delegate long GetLengthDelegate();
+    /// <summary>
+    /// Delegate that sets the length of the buffer
+    /// </summary>
+    /// <param name="length">The new length for the buffer</param>
     public delegate void SetLengthDelegate(long length);
 
+    /// <summary>
+    /// Defines a partial stream that allows to write and read buffers with 'custom' delegates
+    /// </summary>
     public class PartialStream : Stream 
     {
         private Stream _stream;
