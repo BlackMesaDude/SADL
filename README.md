@@ -6,7 +6,7 @@ Index
 <!--ts-->
    * [Introduction](#SADL)
       * [What does provide](#what-does-provide)
-   * [Repository Statuss](#repository-status)
+   * [Repository Status](#repository-status)
 <!--te-->
 
 **SADL** is a library written in C#.net for **Grand Theft Auto V** a game made by the *Rockstar Games* developers. With this library the developer is able to encrypt or decrypt any supported resource that resides in the game files. 
