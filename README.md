@@ -10,6 +10,7 @@ Index
    * [How does it work?](#how-does-it-work)
       * [AES](#aes)
       * [Jenkins](#jenkins)
+   * [Support](#support)
    * [Repository Status](#repository-status)
 <!--te-->
 
@@ -40,7 +41,15 @@ then `AddRoundKey` will combine, again, each byte of the DataBlock to the sessio
 
 ### Jenkins
 
-Jenkins function is a non-cryptographic hash function for multi-byte keys. In short words the hash will be generated shifting the original key. This will be the **session key** mentioned in the [AES](#aes) section.  
+Jenkins function is a non-cryptographic hash function for multi-byte keys. In short words the hash will be generated shifting the original key. This will be the **session key** mentioned in the [AES](#aes) section. 
+
+### Support
+
+| Platform 	| Support           	|
+|----------	|-------------------	|
+| Windows  	| x64 Only          	|
+| Linux    	| x64 Only          	|
+| MacOS    	| x64 BootCamp Only 	|
 
 ## Repository Status
 
