@@ -17,6 +17,9 @@
 
 namespace SADL.Rage.GeneralResources.Common.Types
 {
+    /// <summary>
+    /// Represents a float that can be referenced in a resource structure
+    /// </summary>
     public class float_r : ResourceSystemBlock
     {
         /// <summary>
