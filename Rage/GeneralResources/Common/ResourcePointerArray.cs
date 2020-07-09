@@ -194,7 +194,7 @@ namespace SADL.Rage.GeneralResources.Common
         }
 
         /// <summary>
-        /// Copyes an array to a specified index
+        /// Copies an array to a specified index
         /// </summary>
         /// <param name="array">Array to be copied</param>
         /// <param name="arrayIndex">Index where the array needs to be copied</param>
