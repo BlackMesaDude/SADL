@@ -37,20 +37,14 @@ namespace SADL.Rage.GeneralResources.Common.Types
         /// </summary>
         /// <param name="reader">Reader wich will help for reading the byte</param>
         /// <param name="parameters">Additional parameters for data grabbing</param>
-        public override void Read(ResourceDataReader reader, params object[] parameters)
-        {
-            Value = reader.ReadByte();
-        }
+        public override void Read(ResourceDataReader reader, params object[] parameters) => Value = reader.ReadByte();
 
         /// <summary>
         /// Writes a byte value
         /// </summary>
         /// <param name="writer">Writer wich will help for writing the byte</param>
         /// <param name="parameters">Additional parameters for data grabbing</param>
-        public override void Write(ResourceDataWriter writer, params object[] parameters)
-        {
-            writer.Write(Value);
-        }
+        public override void Write(ResourceDataWriter writer, params object[] parameters) => writer.Write(Value);
 
         public static explicit operator byte (byte_r value)
         {
