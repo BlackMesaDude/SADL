@@ -44,4 +44,4 @@ Jenkins function is a non-cryptographic hash function for multi-byte keys. In sh
 
 ## Repository Status
 
-![.NET Core](https://github.com/francescomesianodev/SADL/workflows/.NET%20Core/badge.svg) ![.NET Core](https://github.com/francescomesianodev/SADL/workflows/.NET%20Core/badge.svg?event=release)
+![.NET Core Build](https://github.com/francescomesianodev/SADL/workflows/.NET%20Core/badge.svg) ![.NET Core Release](https://github.com/francescomesianodev/SADL/workflows/.NET%20Core/badge.svg?event=release)
