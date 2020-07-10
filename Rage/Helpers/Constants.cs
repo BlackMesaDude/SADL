@@ -84,26 +84,5 @@ namespace SADL.Rage.Helpers
             /// </summary>
             public const System.Security.Cryptography.PaddingMode PADDING_MODE = System.Security.Cryptography.PaddingMode.None;
         }
-
-        /// <summary>
-        /// Defines delegates used by a Stream, such as <see cref="SADL.Rage.Data.PartialStream"/>
-        /// </summary>
-        public readonly ref struct StreamDelegate 
-        {
-            /// <summary>
-            /// Getter delegate for the offset
-            /// </summary>
-            public delegate long GetOffset();
-            /// <summary>
-            /// Getter delegate for the length
-            /// </summary>
-            public delegate long GetLength();
-
-            /// <summary>
-            /// Setter delegate for the length
-            /// </summary>
-            /// <param name="length">The length that should be set</param>
-            public delegate void SetLength(long length);
-        }
     }
 }
