@@ -17,7 +17,8 @@
 
 using System;
 using System.IO;
-using System.Collections.Generic;
+
+using Global = SADL.Rage.Helpers.Constants;
 
 using SADL.Rage.Data.Formatting;
 using SADL.Rage.GeneralResources.Interfaces;
@@ -26,9 +27,6 @@ namespace SADL.Rage.GeneralResources
 {
     public class ResourceDataWriter : SADL.Rage.Data.DataWriter
     {
-        private const long SYSTEM_BASE = 0x50000000;                                                // standard system segment base index                                                        
-        private const long GRAPHICS_BASE = 0x60000000;                                              // standard graphical segment base index
-
         private Stream _sysStream, _grpStream;                                                      // defines a stream for the system segment and graphic segment
 
         /// <summary>
@@ -58,9 +56,9 @@ namespace SADL.Rage.GeneralResources
         protected override void WriteToStream(byte[] value, bool ignoreEndianess = true)
         {
             // This handles the system segment wich is triggered when the position hits the SYSTEM_BASE index
-            if ((Position & SYSTEM_BASE) == SYSTEM_BASE)
+            if ((Position & Global.SegmentAddress.SYSTEM_SEGMENT) == Global.SegmentAddress.SYSTEM_SEGMENT)
             {
-                _sysStream.Position = Position & ~SYSTEM_BASE;                                          // the position of the stream wich is based on the SYSTEM_BASE
+                _sysStream.Position = Position & ~Global.SegmentAddress.SYSTEM_SEGMENT;                 // the position of the stream wich is based on the SYSTEM_BASE
 
                 // if endianess is enabled and set to big endian then the buffer will be cloned and reversed to avoid any problems with the original source
                 if (!ignoreEndianess && (Endianess == Endianess.BigEndian))
@@ -74,13 +72,13 @@ namespace SADL.Rage.GeneralResources
                     _sysStream.Write(value, 0, value.Length);                                           // writes the given buffer
                 }
 
-                Position = _sysStream.Position | SYSTEM_BASE;                                           // resets the stream position                                        
+                Position = _sysStream.Position | Global.SegmentAddress.SYSTEM_SEGMENT;                  // resets the stream position                                        
             }
 
             // this handles the graphical segment wich is triggered when the position hits the GRAPHICS_BASE index
-            if ((Position & GRAPHICS_BASE) == GRAPHICS_BASE)
+            if ((Position & Global.SegmentAddress.GRAPHIC_SEGMENT) == Global.SegmentAddress.GRAPHIC_SEGMENT)
             {
-                _grpStream.Position = Position & ~GRAPHICS_BASE;                                        // the position of the stream wich is based on the GRAPHICS_BASE
+                _grpStream.Position = Position & ~Global.SegmentAddress.GRAPHIC_SEGMENT;                // the position of the stream wich is based on the GRAPHICS_BASE
 
                 // if endianess is enabled and set to big endian then the buffer will be cloned and reversed to avoid any problems with the original source
                 if (!ignoreEndianess && (Endianess == Endianess.BigEndian))
@@ -94,7 +92,7 @@ namespace SADL.Rage.GeneralResources
                     _sysStream.Write(value, 0, value.Length);                                           // writes the given buffer
                 }
 
-                Position = _grpStream.Position | GRAPHICS_BASE;                                         // resets the stream position
+                Position = _grpStream.Position | Global.SegmentAddress.GRAPHIC_SEGMENT;                 // resets the stream position
             }
 
             throw new Exception("Unable to write, the position is invalid!");
