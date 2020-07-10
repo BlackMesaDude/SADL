@@ -19,6 +19,8 @@ using System;
 using System.IO;
 using System.Collections.Generic;
 
+using Global = SADL.Rage.Helpers.Constants;
+
 using SADL.Rage.Data.Formatting;
 using SADL.Rage.GeneralResources.Interfaces;
 
@@ -26,9 +28,6 @@ namespace SADL.Rage.GeneralResources
 {
     public class ResourceDataReader : SADL.Rage.Data.DataReader
     {
-        private const long SYSTEM_BASE = 0x50000000;                                                    // standard system segment base index
-        private const long GRAPHICS_BASE = 0x60000000;                                                  // standard graphics segment base index
-
         private Stream _sysStream, _grpStream;                                                          // defines a stream for the system segment and graphic segment
 
         // Dictionary that contains every segment readden from this reader
@@ -62,9 +61,9 @@ namespace SADL.Rage.GeneralResources
         protected override byte[] ReadFromStream(int count, bool ignoreEndianess = false)
         {
             // This handles the system segment wich is triggered when the position hits the SYSTEM_BASE index
-            if ((Position & SYSTEM_BASE) == SYSTEM_BASE)
+            if ((Position & Global.SegmentAddress.SYSTEM_SEGMENT) == Global.SegmentAddress.SYSTEM_SEGMENT)
             {
-                _sysStream.Position = Position & ~SYSTEM_BASE;                                          // the position of the stream wich is based on the SYSTEM_BASE
+                _sysStream.Position = Position & ~Global.SegmentAddress.SYSTEM_SEGMENT;                 // the position of the stream wich is based on the SYSTEM_BASE
 
                 byte[] buffer = new byte[count];                                                        // buffer wich stores the readden data
                 _sysStream.Read(buffer, 0, count);                                                      // reads the data to the buffer at offset 0
@@ -75,15 +74,15 @@ namespace SADL.Rage.GeneralResources
                     Array.Reverse(buffer);
                 }
 
-                Position = _sysStream.Position | SYSTEM_BASE;                                           // resets the stream position
+                Position = _sysStream.Position | Global.SegmentAddress.SYSTEM_SEGMENT;                  // resets the stream position
 
                 return buffer;                                                                          // returns the processed buffer
             }
 
             // this handles the graphical segment wich is triggered when the position hits the GRAPHICS_BASE index
-            if ((Position & GRAPHICS_BASE) == GRAPHICS_BASE)
+            if ((Position & Global.SegmentAddress.GRAPHIC_SEGMENT) == Global.SegmentAddress.GRAPHIC_SEGMENT)
             {
-                _grpStream.Position = Position & ~GRAPHICS_BASE;                                        // the position of the stream wich is based on the GRAPHICS_BASE
+                _grpStream.Position = Position & ~Global.SegmentAddress.GRAPHIC_SEGMENT;                // the position of the stream wich is based on the GRAPHICS_BASE
 
                 byte[] buffer = new byte[count];                                                        // buffer wich stores the readden data
                 _grpStream.Read(buffer, 0, count);                                                      // reads the data to the buffer at offset 0
@@ -94,7 +93,7 @@ namespace SADL.Rage.GeneralResources
                     Array.Reverse(buffer);
                 }
 
-                Position = _grpStream.Position | GRAPHICS_BASE;                                         // resets the stream position
+                Position = _grpStream.Position | Global.SegmentAddress.GRAPHIC_SEGMENT;                 // resets the stream position
 
                 return buffer;                                                                          // returns the processed buffer
             }
