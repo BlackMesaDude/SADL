@@ -15,8 +15,11 @@
  *  along with this program.  If not, see <https://www.gnu.org/licenses/>.
  **/
 
-using SADL.Rage.Encryption.Interfaces;
 using System.Security.Cryptography;
+
+using Global = SADL.Rage.Helpers.Constants;
+
+using SADL.Rage.Encryption.Interfaces;
 
 namespace SADL.Rage.Encryption
 {
@@ -55,13 +58,13 @@ namespace SADL.Rage.Encryption
         {
             Rijndael rijndael = Rijndael.Create();                                                              // creates Rijndael symmetric algorithm solution
 
-            rijndael.KeySize = 256;                                                                             // sets the size of the key at 256 bits
+            rijndael.KeySize = Global.EncryptionData.KEY_SIZE;                                                  // sets the size of the key at 256 bits
             rijndael.Key = key;                                                                                 // sets the key as the given buffer
 
-            rijndael.BlockSize = 128;                                                                           // sets the default block size at 128 bits
+            rijndael.BlockSize = Global.EncryptionData.BLOCK_SIZE;                                              // sets the default block size at 128 bits
 
-            rijndael.Mode = CipherMode.ECB;                                                                     // sets decryption mode to ECB wich decrypts and encrypts each block individually
-            rijndael.Padding = PaddingMode.None;                                                                // sets padding to none because we dont need padding of the block
+            rijndael.Mode = Global.EncryptionData.CHIPER_MODE;                                                  // sets decryption mode to ECB wich decrypts and encrypts each block individually
+            rijndael.Padding = Global.EncryptionData.PADDING_MODE;                                              // sets padding to none because we dont need padding of the block
 
             byte[] buffer = (byte[]) data.Clone();                                                              // clones the bytestream to another buffer
             var lenght = data.Length - data.Length % 16;                                                        // defines the lenght of the data
@@ -69,7 +72,7 @@ namespace SADL.Rage.Encryption
             // if lenght is greater than 0 then decrypt
             if(lenght > 0)
             {
-                var decryptor = rijndael.CreateDecryptor();                                                     // creates a Decryptor
+                ICryptoTransform decryptor = rijndael.CreateDecryptor();                                        // creates a Decryptor
                 for(int i = 0; i < round; i++)                                                                                  
                 {
                     decryptor.TransformBlock(buffer, 0, lenght, buffer, 0);                                     // using the created decryptor a transformation of the block will be done at offsets 0 I\O
@@ -90,13 +93,13 @@ namespace SADL.Rage.Encryption
         {
             Rijndael rijndael = Rijndael.Create();                                                              // creates Rijndael symmetric algorithm solution
 
-            rijndael.KeySize = 256;                                                                             // sets the size of the key at 256 bits
+            rijndael.KeySize = Global.EncryptionData.KEY_SIZE;                                                  // sets the size of the key at 256 bits
             rijndael.Key = key;                                                                                 // sets the key as the given buffer                                  
 
-            rijndael.BlockSize = 128;                                                                           // sets the default block size at 128 bits
+            rijndael.BlockSize = Global.EncryptionData.BLOCK_SIZE;                                              // sets the default block size at 128 bits
 
-            rijndael.Mode = CipherMode.ECB;                                                                     // sets decryption mode to ECB wich decrypts and encrypts each block individually
-            rijndael.Padding = PaddingMode.None;                                                                // sets padding to none because we dont need padding of the block
+            rijndael.Mode = Global.EncryptionData.CHIPER_MODE;                                                  // sets decryption mode to ECB wich decrypts and encrypts each block individually
+            rijndael.Padding = Global.EncryptionData.PADDING_MODE;                                              // sets padding to none because we dont need padding of the block
 
             byte[] buffer = (byte[])data.Clone();                                                               // clones the bytestream to another buffer
             var lenght = data.Length - data.Length % 16;                                                        // defines the lenght of the data
@@ -104,7 +107,7 @@ namespace SADL.Rage.Encryption
             // if lenght is greater than 0 then encrypt
             if (lenght > 0)
             {
-                var encryptor = rijndael.CreateEncryptor();                                                     // creates Encryptor
+                ICryptoTransform encryptor = rijndael.CreateEncryptor();                                        // creates Encryptor
                 for (int i = 0; i < round; i++)
                 {
                     encryptor.TransformBlock(buffer, 0, lenght, buffer, 0);                                     // using the created encryptor a transformation of the block will be done at offsets 0 I\O
