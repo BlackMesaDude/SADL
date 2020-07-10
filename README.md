@@ -61,7 +61,7 @@ Jenkins function is a non-cryptographic hash function for multi-byte keys. In sh
 ## Additional Resources
 ### Libraries 
 
-[DirectXTexNet](https://github.com/deng0/DirectXTexNet) Copyright (c) 2020 Dennis Gocke
+[DirectXTexNet](https://github.com/deng0/DirectXTexNet) `Copyright (c) 2020 Dennis Gocke`
 
 ## Repository Status
 
