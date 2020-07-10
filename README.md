@@ -6,6 +6,7 @@ Index
 <!--ts-->
    * [Introduction](#SADL)
       * [Notes](#notes)
+      * [Special Thanks](#special-thanks)
       * [What does it provide?](#what-does-it-provide)
    * [How does it work?](#how-does-it-work)
       * [AES](#aes)
@@ -21,6 +22,10 @@ This library is derived from the *GTA Toolkit* made by [Neodymium146](https://gi
 ### Notes
 
 **SADL** gives the opportunity to access game files and modify them as you want leading to a easy solution for modding game files. This library was meant to _re-port_ and optimize the known ways to access and edit game files, this library isn't meant for online modding and shouldn't be referenced as one. **Grand Theft Auto Online** is already a place destroyed by money and modders and **SADL** shouldn't be taken as a reason to it.
+
+### Special Tanks
+
+Thanks to [rickycorte](https://github.com/rickycorte) and [ItzTravelInTime](https://github.com/ITzTravelInTime) for helping me through the development of this library, leading to make this library more affidable and optimized for the next developer who will use it.
 
 ### What does it provide?
 
