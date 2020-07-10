@@ -101,5 +101,16 @@ namespace SADL.Rage.Helpers
             /// </summary>
             public const System.Security.Cryptography.PaddingMode PADDING_MODE = System.Security.Cryptography.PaddingMode.None;
         }
+
+        /// <summary>
+        /// Defines the values used by hashing functions
+        /// </summary>
+        public readonly ref struct HashData
+        {
+            /// <summary>
+            /// Default block length of an hash key
+            /// </summary>
+            public const int BLOCK_LENGTH = 1048576;
+        }
     }
 }
