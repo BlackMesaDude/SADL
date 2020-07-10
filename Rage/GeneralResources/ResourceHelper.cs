@@ -215,22 +215,16 @@ namespace SADL.Rage.GeneralResources
         // clears each stack and hashset
         private static void ClearData()
         {
-            if(_prtBlocks.Count != 0)
                 _prtBlocks.Clear();
                 
-            if(_stkBlocks.Count != 0)
                 _stkBlocks.Clear();
 
-            if(_stkSubBlocks.Count != 0)
                 _stkBlocks.Clear();
 
-            if(_sysBlocks.Count != 0)
                 _sysBlocks.Clear();
 
-            if(_gfxBlocks.Count != 0)
                 _gfxBlocks.Clear();
 
-            if(_processed.Count != 0)
                 _processed.Clear();
         }
     }
