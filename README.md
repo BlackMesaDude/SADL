@@ -12,6 +12,8 @@ Index
       * [AES](#aes)
       * [Jenkins](#jenkins)
    * [Support](#support)
+   * [Additional Resources](#additional-resources)
+      * [Libraries](#libraries)
    * [Repository Status](#repository-status)
 <!--te-->
 
@@ -55,6 +57,11 @@ Jenkins function is a non-cryptographic hash function for multi-byte keys. In sh
 | Windows  	| x64 Only          	|
 | Linux    	| x64 Only          	|
 | MacOS    	| x64 BootCamp Only 	|
+
+## Additional Resources
+### Libraries 
+
+[DirectXTexNet](https://github.com/deng0/DirectXTexNet) `Copyright (c) 2020` [Dennis Gocke](https://github.com/deng0)
 
 ## Repository Status
 
