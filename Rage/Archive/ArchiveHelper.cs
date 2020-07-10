@@ -19,6 +19,8 @@
  using System.IO;
  using System.Collections.Generic;
 
+ using Global = SADL.Rage.Helpers.Constants;
+
  namespace SADL.Rage 
  {
      /// <summary>
@@ -53,8 +55,6 @@
     /// </summary>
      public static class ArchiveHelper 
      {
-        private const int BUFFER_SIZE = 16384;                                                                  // standard buffer size
-
         /// <summary>
         /// Finds the maximum length of a specified <see cref="DataBlock"/>
         /// </summary>
@@ -141,11 +141,11 @@
         /// <param name="length">The length of the data that needs to be moved</param>
         public static void MoveBytes(Stream stream, long srcOffset, long desOffset, long length)
         {
-            byte[] buffer = new byte[BUFFER_SIZE];                                                                 // creates a byte array wich is size is based on the standard buffer size
+            byte[] buffer = new byte[Global.BufferData.BUFFER_SIZE];                                               // creates a byte array wich is size is based on the standard buffer size
             while(length > 0)
             {
                 stream.Position = srcOffset;                                                                       // sets the stream position to the initial position
-                int data = stream.Read(buffer, 0, (int) Math.Min(length, BUFFER_SIZE));                            // takes the data that needs to be moved based on a stream read of the buffer (at offset 0) wich the count is based on the defined length and standard buffer size minimum value
+                int data = stream.Read(buffer, 0, (int) Math.Min(length, Global.BufferData.BUFFER_SIZE));          // takes the data that needs to be moved based on a stream read of the buffer (at offset 0) wich the count is based on the defined length and standard buffer size minimum value
 
                 stream.Position = desOffset;                                                                       // sets the stream position to the destination position
                 stream.Write(buffer, 0, data);                                                                     // writes the data to the stream at the defined position
