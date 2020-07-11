@@ -15,14 +15,14 @@
  *  along with this program.  If not, see <https://www.gnu.org/licenses/>.
  **/
 
-using DrawResources = SADL.Rage.Wrappers.Resources.Interfaces.Drawables;
+using SADL.Rage.Wrappers.Resources.Interfaces.Drawables;
 
 namespace SADL.Rage.Wrappers.Resources.Interfaces.Fragments
 {
     /// <summary>
     /// Defines a drawable fragment shader
     /// </summary>
-    public interface IFragDrawable : DrawResources.IDrawable 
+    public interface IFragDrawable : IDrawable 
     { 
         // TODO: needs to be implemented
     }
