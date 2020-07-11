@@ -25,7 +25,7 @@ This library is derived from the *GTA Toolkit* made by [Neodymium146](https://gi
 
 ### Special Thanks
 
-Thanks to [rickycorte](https://github.com/rickycorte) and [ItzTravelInTime](https://github.com/ItzTravelInTime) for helping me through the development of this library, leading to make this library more affidable and optimized for the next developer who will use it.
+Thanks to [rickycorte](https://github.com/rickycorte) and [ItzTravelInTime](https://github.com/ItzTravelInTime) for helping me through the development, leading to make this library more affidable and optimized for the next developer who will use it.
 
 ### What does it provide?
 
