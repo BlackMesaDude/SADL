@@ -23,14 +23,14 @@ namespace SADL.Rage.Encryption.Interfaces
     public interface IEncryption
     {
         /// <summary>
-        /// Allows to decrypt a bytestream
+        /// Allows to decrypt a stream
         /// </summary>
         /// <param name="data"></param>
         /// <returns></returns>
         byte[] Decrypt(byte[] data, byte[] key, int round = 1);
 
         /// <summary>
-        /// Allows to encrypt a bytestream
+        /// Allows to encrypt a stream
         /// </summary>
         /// <param name="data"></param>
         /// <param name="key"></param>
