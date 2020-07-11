@@ -17,7 +17,7 @@
 
 using System.Collections.Generic;
 
-namespace SADL.Rage.Wrappers.Resources.Interfaces.Textures
+namespace SADL.Rage.Wrappers.Resources.Interfaces
 {
     /// <summary>
     /// Defines available texture formats

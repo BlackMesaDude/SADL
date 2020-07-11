@@ -17,7 +17,7 @@
 
 using System.Collections.Generic;
 
-namespace SADL.Rage.Wrappers.Resources.Interfaces.Drawables
+namespace SADL.Rage.Wrappers.Resources.Interfaces
 {
     /// <summary>
     /// Defines a list shaders

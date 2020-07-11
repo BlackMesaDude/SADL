@@ -15,7 +15,7 @@
  *  along with this program.  If not, see <https://www.gnu.org/licenses/>.
  **/
 
-namespace SADL.Rage.Wrappers.Resources.Interfaces.Drawables
+namespace SADL.Rage.Wrappers.Resources.Interfaces
 {
     /// <summary>
     /// Defines a drawbale dictionary

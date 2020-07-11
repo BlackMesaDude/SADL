@@ -15,7 +15,7 @@
  *  along with this program.  If not, see <https://www.gnu.org/licenses/>.
  **/
 
-namespace SADL.Rage.Wrappers.Resources.Interfaces.Textures
+namespace SADL.Rage.Wrappers.Resources.Interfaces
 {
     /// <summary>
     /// Representa a texture dictionary file
