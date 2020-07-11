@@ -22,7 +22,7 @@ namespace SADL.Rage.Wrappers.Resources.Interfaces.Fragments
     /// <summary>
     /// Defines a drawable fragment shader
     /// </summary>
-    public interface IFragDrawable : IDrawable 
+    public interface IFragDrawable : SADL.Rage.Wrappers.Resources.Interfaces.Drawables.IDrawable 
     { 
         // TODO: needs to be implemented
     }
