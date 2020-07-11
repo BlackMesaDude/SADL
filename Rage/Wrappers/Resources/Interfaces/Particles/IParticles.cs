@@ -15,7 +15,7 @@
  *  along with this program.  If not, see <https://www.gnu.org/licenses/>.
  **/
 
- using TexResources = SADL.Rage.Wrappers.Resources.Interfaces.Textures;
+using SADL.Rage.Wrappers.Resources.Interfaces.Textures;
 
 namespace SADL.Rage.Wrappers.Resources.Interfaces.Particles
 {
@@ -27,6 +27,6 @@ namespace SADL.Rage.Wrappers.Resources.Interfaces.Particles
         /// <summary>
         /// Gets the dictionary wich stores the texture of the particles
         /// </summary>
-        TexResources.ITextureDictionary TextureDictionary { get; }
+        ITextureDictionary TextureDictionary { get; }
     }
 }
