@@ -15,7 +15,7 @@
  *  along with this program.  If not, see <https://www.gnu.org/licenses/>.
  **/
 
-using TexResources = SADL.Rage.Wrappers.Resources.Interfaces.Textures;
+using SADL.Rage.Wrappers.Resources.Interfaces.Textures;
 
 namespace SADL.Rage.Wrappers.Resources.Interfaces.Drawables
 {
@@ -27,7 +27,7 @@ namespace SADL.Rage.Wrappers.Resources.Interfaces.Drawables
         /// <summary>
         /// Gets a dictionary of textures
         /// </summary>
-        TexResources.ITextureDictionary TextureDictionary { get; }
+        ITextureDictionary TextureDictionary { get; }
         /// <summary>
         /// Gets a list of shaders contained in the group
         /// </summary>
