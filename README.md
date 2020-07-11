@@ -12,8 +12,6 @@ Index
       * [AES](#aes)
       * [Jenkins](#jenkins)
    * [Support](#support)
-   * [Additional Resources](#additional-resources)
-      * [Libraries](#libraries)
    * [Repository Status](#repository-status)
 <!--te-->
 
@@ -27,7 +25,7 @@ This library is derived from the *GTA Toolkit* made by [Neodymium146](https://gi
 
 ### Special Thanks
 
-Thanks to [rickycorte](https://github.com/rickycorte) and [ItzTravelInTime](https://github.com/ItzTravelInTime) for helping me through the development of this library, leading to make this library more affidable and optimized for the next developer who will use it.
+Thanks to [rickycorte](https://github.com/rickycorte) and [ItzTravelInTime](https://github.com/ItzTravelInTime) for helping me through the development, leading to make this library more affidable and optimized for the next developer who will use it.
 
 ### What does it provide?
 
@@ -57,11 +55,6 @@ Jenkins function is a non-cryptographic hash function for multi-byte keys. In sh
 | Windows  	| x64 Only          	|
 | Linux    	| x64 Only          	|
 | MacOS    	| x64 BootCamp Only 	|
-
-## Additional Resources
-### Libraries 
-
-[DirectXTexNet](https://github.com/deng0/DirectXTexNet) `Copyright (c) 2020` [Dennis Gocke](https://github.com/deng0)
 
 ## Repository Status
 
