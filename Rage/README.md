@@ -4,13 +4,11 @@ The namespace `RAGE` contains every class that helps to identify RAGE data.
 
 ## Related Namespaces
 
-* `Archive` - Contains every class used to manipulate an archive
-* `Compression` - Contains every class used to compress or uncompress data from an archive
-* `Data` - Contains every class for manipulating the data, writing or reading it
-* `Encryption` - Contains every class for encrypting or decrypting an archive
-* `GeneralResources` - Includes a porting for the resource files such as types, memory blocks etc.
-* `Hash` - Includes the Jenkins hashing functions
-
-## Usage
-
-Usage of this namespace mostly can be found in the `GrandTheftAuto` namespace
+* `Archive` - Helpers for accessing an archive file
+* `Compression` - Compression and decompression algorithm(s)
+* `Data` - Data reading and writing functions, includes stream helpers
+* `Encryption` - Cryptography algorithm(s) for decrypting and encrypting protected files
+* `GeneralResources` - RAGE resource blocks and data types
+* `Hash` - Hashing functions
+* `Helpers` - Standard helpers for parsing the know resources 
+* `Wrappers` - Wrappers for the known resources
