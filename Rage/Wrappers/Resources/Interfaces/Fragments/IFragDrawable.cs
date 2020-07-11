@@ -15,7 +15,9 @@
  *  along with this program.  If not, see <https://www.gnu.org/licenses/>.
  **/
 
-namespace SADL.Rage.Wrappers.Resources.Interfaces
+using SADL.Rage.Wrappers.Resources.Interfaces.Drawables;
+
+namespace SADL.Rage.Wrappers.Resources.Interfaces.Fragments
 {
     /// <summary>
     /// Defines a drawable fragment shader

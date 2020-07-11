@@ -17,7 +17,7 @@
 
 using System.Collections.Generic;
 
-namespace SADL.Rage.Wrappers.Resources.Interfaces
+namespace SADL.Rage.Wrappers.Resources.Interfaces.Drawables
 {
     /// <summary>
     /// Represents a drawable list

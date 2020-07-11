@@ -15,7 +15,9 @@
  *  along with this program.  If not, see <https://www.gnu.org/licenses/>.
  **/
 
-namespace SADL.Rage.Wrappers.Resources.Interfaces
+using SADL.Rage.Wrappers.Resources.Interfaces.Textures;
+
+namespace SADL.Rage.Wrappers.Resources.Interfaces.Drawables
 {
     /// <summary>
     /// Defines a group shaders

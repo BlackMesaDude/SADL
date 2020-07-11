@@ -15,8 +15,9 @@
  *  along with this program.  If not, see <https://www.gnu.org/licenses/>.
  **/
 
+using SADL.Rage.Wrappers.Resources.Interfaces.Textures;
 
-namespace SADL.Rage.Wrappers.Resources.Interfaces
+namespace SADL.Rage.Wrappers.Resources.Interfaces.Particles
 {
     /// <summary>
     /// Defines a list of particles entities
