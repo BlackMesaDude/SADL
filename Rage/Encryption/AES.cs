@@ -48,6 +48,24 @@ namespace SADL.Rage.Encryption
         }
 
         /// <summary>
+        /// Encrypts data
+        /// </summary>
+        /// <param name="data">Data to be encrypted</param>
+        public byte[] DataEncrypt(byte[] data)
+        {
+            return Encrypt(data, Key, Rounds);
+        }
+
+        /// <summary>
+        /// Decrypts data
+        /// </summary>
+        /// <param name="data">Data to be decrypted</param>
+        public byte[] DataDecrypt(byte[] data)
+        {
+            return Decrypt(data, Key, Rounds);
+        }
+
+        /// <summary>
         /// Allows to decrypt AES with a buffer, key and rounds
         /// </summary>
         /// <param name="data">Bytestream that stores the data</param>
