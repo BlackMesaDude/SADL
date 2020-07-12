@@ -31,8 +31,7 @@ namespace SADL.Rage.Helpers.DirectX.DirectXTex
         /// <param name="width">Width of the image</param>
         /// <param name="height">Height of the image</param>
         /// <param name="format">Format for the decompression</param>
-
-        [DllImport("Resources\\DirectXTex.dll")]
+        [DllImport(@"Resources\Windows\x64\DirectXTex.dll")]
         public static extern byte[] Decompress(byte[] data, int width, int height, int format);
 
         /// <summary>
@@ -42,7 +41,7 @@ namespace SADL.Rage.Helpers.DirectX.DirectXTex
         /// <param name="width">Width of the image</param>
         /// <param name="height">Height of the image</param>
         /// <param name="format">Format for the compression</param>
-        [DllImport("Resources\\DirectXTex.dll")]
+        [DllImport(@"Resources\Windows\x64\DirectXTex.dll")]
         public static extern byte[] Compress(byte[] data, int width, int height, int format);
     }
 
@@ -59,7 +58,7 @@ namespace SADL.Rage.Helpers.DirectX.DirectXTex
         /// <param name="height">Height of the image</param>
         /// <param name="inputFormat">Initial format of the image</param>
         /// <param name="outputFormat">End format of the image</param>
-        [DllImport("Resources\\DirectXTex.dll")]
+        [DllImport(@"Resources\Windows\x64\DirectXTex.dll")]
         public static extern byte[] Convert(byte[] data, int width, int height, int inputFormat, int outputFormat);
     }
 
@@ -71,13 +70,13 @@ namespace SADL.Rage.Helpers.DirectX.DirectXTex
         /// <summary>
         /// Gets the image pitch factor of a row
         /// </summary>
-        [DllImport("Resources\\DirectXTex.dll")]
+        [DllImport(@"Resources\Windows\x64\DirectXTex.dll")]
         public static extern int GetRowPitch();
 
         /// <summary>
         /// Gets the image pitch factor of the slice
         /// </summary>
-        [DllImport("Resources\\DirectXTex.dll")]
+        [DllImport(@"Resources\Windows\x64\DirectXTex.dll")]
         public static extern int GetSlicePitch();
     }
 
@@ -90,7 +89,7 @@ namespace SADL.Rage.Helpers.DirectX.DirectXTex
         /// Reads a <code>.dds</code> file
         /// </summary>
         /// <param name="fileName">The file to be read</param>
-        [DllImport("Resources\\DirectXTex.dll")]
+        [DllImport(@"Resources\Windows\x64\DirectXTex.dll")]
         public static extern ImageStruct ReadDDS(string fileName);
 
         /// <summary>
@@ -98,7 +97,7 @@ namespace SADL.Rage.Helpers.DirectX.DirectXTex
         /// </summary>
         /// <param name="fileName">The file to be written</param>
         /// <param name="image">Image to be written in the file</param>
-        [DllImport("Resources\\DirectXTex.dll")]
+        [DllImport(@"Resources\Windows\x64\DirectXTex.dll")]
         public static extern void WriteDDS(string fileName, ImageStruct image);
     }
 }
