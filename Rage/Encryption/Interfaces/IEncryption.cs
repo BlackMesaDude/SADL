@@ -27,15 +27,6 @@ namespace SADL.Rage.Encryption.Interfaces
         /// </summary>
         /// <param name="data"></param>
         /// <returns></returns>
-        byte[] Decrypt(byte[] data, byte[] key, int round = 1);
-
-        /// <summary>
-        /// Allows to encrypt a stream
-        /// </summary>
-        /// <param name="data"></param>
-        /// <param name="key"></param>
-        /// <param name="round"></param>
-        /// <returns></returns>
-        byte[] Encrypt(byte[] data, byte[] key, int round = 1);
+        byte[] Decrypt(byte[] data);
     }
 }
