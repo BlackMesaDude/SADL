@@ -51,7 +51,7 @@ namespace SADL.Rage.Encryption
         /// Encrypts data
         /// </summary>
         /// <param name="data">Data to be encrypted</param>
-        public byte[] DataEncrypt(byte[] data)
+        public byte[] Encrypt(byte[] data)
         {
             return Encrypt(data, Key, Rounds);
         }
@@ -60,7 +60,7 @@ namespace SADL.Rage.Encryption
         /// Decrypts data
         /// </summary>
         /// <param name="data">Data to be decrypted</param>
-        public byte[] DataDecrypt(byte[] data)
+        public byte[] Decrypt(byte[] data)
         {
             return Decrypt(data, Key, Rounds);
         }
