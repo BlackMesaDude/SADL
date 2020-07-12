@@ -21,7 +21,7 @@ This library is derived from the *GTA Toolkit* made by [Neodymium146](https://gi
 
 ### Notes
 
-**SADL** gives the opportunity to access game files and modify them as you want leading to a easy solution for modding game files. This library was meant to _re-port_ and optimize the known ways to access and edit game files, this library isn't meant for online modding and shouldn't be referenced as one. **Grand Theft Auto Online** is already a place destroyed by money and modders and **SADL** shouldn't be taken as a reason to it.
+**SADL** gives the opportunity to edit or read game files leading to a easy solution for modding. This library is meant to _re-port_ and _optimize_ the old one that `Neodymium146` made. The library is fully active and gives support to the next developer who will use it.
 
 ### Special Thanks
 
@@ -50,11 +50,15 @@ Jenkins function is a non-cryptographic hash function for multi-byte keys. In sh
 
 ### Support
 
-| Platform 	| Support           	|
-|----------	|-------------------	|
-| Windows  	| x64 Only          	|
-| Linux    	| x64 Only          	|
-| MacOS    	| x64 BootCamp Only 	|
+| Platform 	            | Support           	|
+|-----------------------|---------------------|
+| Windows  	            | x64 Only          	|
+| Linux    	            | x64 Only          	|
+| MacOS    	            | x64 BootCamp Only 	|
+| Old Gen Consoles    	| No  	              | 
+| New Gen Consoles      | No                  |
+
+`! Support for Playstation and Xbox is still under development !`
 
 ## Repository Status
 
