@@ -48,11 +48,11 @@ Jenkins function is a non-cryptographic hash function for multi-byte keys. In sh
 
 ### Support
 
+*Linux* and *MacOS* port **isn't needed** due to the fact that users of these two operative system can only **emulate** (or translate trough a layer) *Windows* in order to play the game.
+
 | Platform 	            | Support           	|
 |-----------------------|---------------------|
 | Windows  	            | x64 Only          	|
-| Linux    	            | x64 Only          	|
-| MacOS    	            | x64 BootCamp Only 	|
 | Old Gen Consoles    	| No  	              | 
 | New Gen Consoles      | No                  |
 
