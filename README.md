@@ -1,5 +1,4 @@
-# SADL
-
+# SADL <img src="https://img.shields.io/badge/Version-1.0-informational" /> <img src="https://img.shields.io/badge/License-GPL--3.0-informational" /> <img src="https://github.com/francescomesianodev/SADL/workflows/.NET%20Core/badge.svg" />
 Index
 =================
 
@@ -12,7 +11,6 @@ Index
       * [AES](#aes)
       * [Jenkins](#jenkins)
    * [Support](#support)
-   * [Repository Status](#repository-status)
 <!--te-->
 
 **SADL** is a library written in C#.net for **Grand Theft Auto V** a game made by the *Rockstar Games* developers. With this library the developer is able to encrypt or decrypt any supported resource that resides in the game files. 
@@ -59,7 +57,3 @@ Jenkins function is a non-cryptographic hash function for multi-byte keys. In sh
 | New Gen Consoles      | No                  |
 
 `! Support for Playstation and Xbox is still under development !`
-
-## Repository Status
-
-![.NET Core Build](https://github.com/francescomesianodev/SADL/workflows/.NET%20Core/badge.svg) ![.NET Core Release](https://github.com/francescomesianodev/SADL/workflows/.NET%20Core/badge.svg?event=release)
