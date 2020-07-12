@@ -1,7 +1,4 @@
 # RAGE
-
-The namespace `RAGE` contains every class that helps to identify RAGE data.
-
 ## Related Namespaces
 
 * `Archive` - Helpers for accessing an archive file
