@@ -1,9 +1,5 @@
 # SADL <img src="https://img.shields.io/badge/Version-1.0-informational" /> <img src="https://img.shields.io/badge/License-GPL--3.0-informational" /> <img src="https://github.com/francescomesianodev/SADL/workflows/.NET%20Core/badge.svg" />
 
-**SADL** is a library written in pure C# that allows to access protected game files from the *Rockstar Games*' title **Grand Theft Auto V**.
-
-This library is a re-adaptation of the *GTA Toolkit* made by [Neodymium146](https://github.com/Neodymium146) back in 2015.
-
 ## Index
 
 <!--ts-->
@@ -15,6 +11,10 @@ This library is a re-adaptation of the *GTA Toolkit* made by [Neodymium146](http
    * [Support](#support)
    * [Notes](#notes)
 <!--te-->
+
+**SADL** is a library written in pure C# that allows to access protected game files from the *Rockstar Games*' title **Grand Theft Auto V**.
+
+This library is a re-adaptation of the *GTA Toolkit* made by [Neodymium146](https://github.com/Neodymium146) back in 2015.
 
 ## Features
 
