@@ -28,7 +28,7 @@ The latest Grand Theft Auto use [AES](https://en.wikipedia.org/wiki/Advanced_Enc
 
 **Advanced Encryption Standard** (or *AES*) is an algorithm that uses temporary matrice buffers to shift and mix the data accordingly.
 
-The process starts by defining a 128-bit buffer where each byte will be combined accordingly in a bitwise xor manner. Additionally, the buffer is even more combined after a certain amount of steps using a look-up table and cyclical mixing the buffer even more. 
+The process starts by defining a 128-bit buffer where each byte will be combined accordingly in a *bitwise* ***xor*** manner. Additionally, the buffer is even more shuffled after a certain amount of steps using a look-up table and cyclical mixing the buffer even more. 
 
 ## Jenkins
 
