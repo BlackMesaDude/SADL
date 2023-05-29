@@ -1,59 +1,45 @@
 # SADL <img src="https://img.shields.io/badge/Version-1.0-informational" /> <img src="https://img.shields.io/badge/License-GPL--3.0-informational" /> <img src="https://github.com/francescomesianodev/SADL/workflows/.NET%20Core/badge.svg" />
-Index
-=================
+
+**SADL** is a library written in pure C# that allows to access protected game files from the *Rockstar Games*' title **Grand Theft Auto V**.
+
+This library is a re-adaptation of the *GTA Toolkit* made by [Neodymium146](https://github.com/Neodymium146) back in 2015.
+
+## Index
 
 <!--ts-->
-   * [Introduction](#SADL)
-      * [Notes](#notes)
-      * [Special Thanks](#special-thanks)
-      * [What does it provide?](#what-does-it-provide)
+   * [SADL](#SADL)
+      * [Features](#features)
    * [How does it work?](#how-does-it-work)
       * [AES](#aes)
       * [Jenkins](#jenkins)
    * [Support](#support)
+   * [Notes](#notes)
 <!--te-->
 
-**SADL** is a library written in C#.net for **Grand Theft Auto V** a game made by the *Rockstar Games* developers. With this library the developer is able to encrypt or decrypt any supported resource that resides in the game files. 
+## Features
 
-This library is derived from the *GTA Toolkit* made by [Neodymium146](https://github.com/Neodymium146) back in 2015 that currently is taking dust. The library was mostly rewritten and optimized.
-
-### Notes
-
-**SADL** gives the opportunity to edit or read game files leading to a easy solution for modding. This library is meant to _re-port_ and _optimize_ the old one that `Neodymium146` made. The library is fully active and gives support to the next developer who will use it.
-
-### Special Thanks
-
-Thanks to [rickycorte](https://github.com/rickycorte) and [ItzTravelInTime](https://github.com/ItzTravelInTime) for helping me through the development, leading to make this library more affidable and optimized for the next developer who will use it.
-
-### What does it provide?
-
-This library is splitted in two parts `RAGE` and `GrandTheftAuto`. **RAGE** provides a solution to accessing and decrypting, an example should be the Cryptography side where it offers the algorithm and other utilities to encrypt or decrypt for the specified security algorithm used by the game to the files. **GrandTheftAuto** provides the shortcuts to access and wrap the game files.
+**SADL** gives the opportunity to execute r\w operation on the game's files using standardized and optimized methodologies that the *GTA Toolkit* doesn't have making the library affidable for future usages such as the creation of visual tools.
 
 # How does it work?
 
-Grand Theft Auto uses [AES](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) encryption algorithm and [Jenkins](https://en.wikipedia.org/wiki/Jenkins_hash_function) hash function. These two have the scope to protect and serve a key to access the files.
+The latest Grand Theft Auto use [AES](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) encryption algorithm along with [Jenkins](https://en.wikipedia.org/wiki/Jenkins_hash_function) to protect any type of access into the game files.
 
-### AES
+## AES
 
-AES is an encryption algorithm that uses byte matrices wich in the library can be found as **DataBlock(s)**, these will store the bytes of data that later will be processed and protected. 
+**Advanced Encryption Standard** (or *AES*) is an algorithm that uses temporary matrice buffers to shift and mix the data accordingly.
 
-The process starts with the `SubBytes` wich substitutes, in a non-linear way, every byte based on the DataBlock where it resides.   
-`ShiftRows` takes place and allows to move the bytes to a n position based on the starting row. 
-`MixColumns` combines the bytes with a linear operation, the bytes will be taken one column per time.
-then `AddRoundKey` will combine, again, each byte of the DataBlock to the session key.
+The process starts by defining a 128-bit buffer where each byte will be combined accordingly in a bitwise xor manner. Additionally, the buffer is even more combined after a certain amount of steps using a look-up table and cyclical mixing the buffer even more. 
 
-### Jenkins
+## Jenkins
 
-Jenkins function is a non-cryptographic hash function for multi-byte keys. In short words the hash will be generated shifting the original key. This will be the **session key** mentioned in the [AES](#aes) section. 
+The Jenkins Functions are non-cryptographic multiple hashing functions for multi-byte keys. In-short, they generate an hash based on a simple shifting on the original key.
 
-### Support
+Grand Theft Auto V uses Jenkins to define the **session key** that will be used with [AES](#aes).
 
-*Linux* and *MacOS* port **isn't needed** due to the fact that users of these two operative system can only **emulate** (or translate trough a layer) *Windows* in order to play the game.
+# Support
 
-| Platform 	            | Support           	|
-|-----------------------|---------------------|
-| Windows  	            | x64 Only          	|
-| Old Gen Consoles    	| No  	              | 
-| New Gen Consoles      | No                  |
+Altrough the library is meant for `Windows x64` you could also use it for other versions from different platforms.
 
-`! Support for Playstation and Xbox is still under development !`
+### Notes
+
+> A warm thanks should go to [rickycorte](https://github.com/rickycorte) and [ItzTravelInTime](https://github.com/ItzTravelInTime) whom helped trough the development making this project more sustainable and optimized.
